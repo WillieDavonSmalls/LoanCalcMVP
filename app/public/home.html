@@ -54,7 +54,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -102,7 +102,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -149,7 +149,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -286,16 +286,15 @@
 </body>
 
 <script type="text/javascript">
-    function findTotal() {
-        var arr = document.getElementsByName('qty');
-        var tot = 0;
-        for (var i = 0; i < arr.length; i++) {
-            if (parseInt(arr[i].value))
-                tot += parseInt(arr[i].value);
+    oBArray = document.getElementsByClassName("balance")
+    function findOBalance(){
+        oBTotal = 0; 
+        for(var i = 0; i < oBArray.length; i++){
+            if(parseInt(oBArray[i].value))
+                oBTotal += parseInt(oBArray[i].value);
         }
-        document.getElementById('total').value = tot;
+    return oBTotal; 
     }
-
 </script>
 
 </html>
