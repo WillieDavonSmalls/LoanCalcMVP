@@ -280,30 +280,21 @@
 
                 <!-- Final Row -->
                 <tr>
-                    <th scope="row">Sallie Mae</th>
-                    <td>5,000.00</td>
+                    <th scope="row">Aggregates</th>
+                    <td id="totOutBalance">5,000.00</td>
                     <td>11.89</td>
                     <td>555.55</td>
                 </tr>
 
             </tbody>
         </table>
+        <button onclick="calculateTotals()" type="button" class="btn btn-danger" style="float: right;">Calculate Totals</button>
 
     </div>
 
 
 </body>
 
-<script type="text/javascript">
-    oBArray = document.getElementsByClassName("balance")
-    function findOBalance() {
-        oBTotal = 0;
-        for (var i = 0; i < oBArray.length; i++) {
-            if (parseInt(oBArray[i].value))
-                oBTotal += parseInt(oBArray[i].value);
-        }
-        return oBTotal;
-    }
-</script>
+<script src="/data/functions.js"></script>
 
 </html>
