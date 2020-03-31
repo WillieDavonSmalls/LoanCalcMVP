@@ -54,7 +54,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance"
+                                aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -102,7 +103,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance"
+                                aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -149,7 +151,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input onblur="findTotal()" type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)">
+                            <input onblur="findTotal()" type="text" class="form-control balance"
+                                aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -272,9 +275,15 @@
                                 <span class="input-group-text">.00</span>
                             </div>
                         </div>
-
                     </td>
+                </tr>
 
+                <!-- Final Row -->
+                <tr>
+                    <th scope="row">Sallie Mae</th>
+                    <td>5,000.00</td>
+                    <td>11.89</td>
+                    <td>555.55</td>
                 </tr>
 
             </tbody>
@@ -287,13 +296,13 @@
 
 <script type="text/javascript">
     oBArray = document.getElementsByClassName("balance")
-    function findOBalance(){
-        oBTotal = 0; 
-        for(var i = 0; i < oBArray.length; i++){
-            if(parseInt(oBArray[i].value))
+    function findOBalance() {
+        oBTotal = 0;
+        for (var i = 0; i < oBArray.length; i++) {
+            if (parseInt(oBArray[i].value))
                 oBTotal += parseInt(oBArray[i].value);
         }
-    return oBTotal; 
+        return oBTotal;
     }
 </script>
 
