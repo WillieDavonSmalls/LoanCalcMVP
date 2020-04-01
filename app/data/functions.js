@@ -9,5 +9,5 @@ function calculateTotals() {
         console.log(oBTotal);
 
     }
-    document.getElementById("totOutBalance").innerHTML = 3000
+    document.getElementById("totOutBalance").innerHTML = oBTotal
 }
