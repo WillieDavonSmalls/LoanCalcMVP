@@ -80,7 +80,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -129,7 +129,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -177,7 +177,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -224,7 +224,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -271,7 +271,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -284,12 +284,12 @@
                     <th scope="row">Aggregates</th>
                     <td id="totOutBalance">5,000.00</td>
                     <td>11.89</td>
-                    <td>555.55</td>
+                    <td id="tot_monthly_payment">555.55</td>
                 </tr>
 
             </tbody>
         </table>
-        <button onclick="calculateTotals()" type="button" class="btn btn-danger" style="float: right;">Calculate
+        <button onclick="calculate_monthly_balance(); calculate_outstanding_balance()" type="button" class="btn btn-danger" style="float: right;">Calculate
             Totals</button>
 
     </div>
