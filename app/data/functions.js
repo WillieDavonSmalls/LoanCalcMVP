@@ -41,7 +41,7 @@ function calculate_aggregate_rate() {
 }
 
 //TODO:  Build table with JQuery
-out_bal_test_array = [
+var out_bal_test_array = [
     '13677.08',
     '27956.22',
     '23299.47',
@@ -49,7 +49,7 @@ out_bal_test_array = [
     '21951.27'
 ]
 
-int_rate_test_array = [
+var int_rate_test_array = [
     '5.125',
     '6.59',
     '5.59',
@@ -57,10 +57,118 @@ int_rate_test_array = [
     '5.06'
 ]
 
-mon_payment_array = [
+var mon_payment_array = [
     '65.25',
     '171.78',
     '121.59',
     '179.9',
     '103.75'
 ]
+
+
+
+var table_test = ''
+for (i = 0; i < 8; i++) {
+    table_test +=
+        `<!-- Row ${i} -->
+        <tr>
+            <!--Loan ${i} Name -->
+            <th scope="row">
+                <input type="text" class="form-control" placeholder="Loan ${i} :" aria-label="Username">
+            </th>
+
+            <!--Oustanding Balance -->
+            <td>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control balance"
+                        aria-label="Amount (to the nearest dollar)"
+                        value="${out_bal_test_array[i]}">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+            </td>
+
+            <!-- Annual Interest Rate  -->
+            <td>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control interest_rate" aria-label="Percent"
+                    value="${int_rate_test_array[i]}">
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </td>
+
+            <!-- Monthly Payment  -->
+            <td>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)"
+                    value="${mon_payment_array[i]}">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+    `
+}
+
+var test =
+    `<!-- Row Five -->
+<tr>
+    <!--Loan Name -->
+    <th scope="row">
+        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
+    </th>
+
+    <!--Oustanding Balance -->
+    <td>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)"
+            value="21951.27">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+
+    </td>
+
+    <!-- Annual Interest Rate  -->
+    <td>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control interest_rate" aria-label="Percent"
+            value="5.06">                           
+            <div class="input-group-append">
+                <span class="input-group-text">%</span>
+            </div>
+        </div>
+    </td>
+
+    <!-- Monthly Payment  -->
+    <td>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)"
+            value="65.25">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+    </td>
+</tr>`
+
+$('#loan_table tr:last').after(test);
