@@ -39,3 +39,28 @@ function calculate_aggregate_rate() {
     }
     document.getElementById("tot_rate").innerHTML = (total0 / total1)
 }
+
+//TODO:  Build table with JQuery
+out_bal_test_array = [
+    '13677.08',
+    '27956.22',
+    '23299.47',
+    '31796.78',
+    '21951.27'
+]
+
+int_rate_test_array = [
+    '5.125',
+    '6.59',
+    '5.59',
+    '6.06',
+    '5.06'
+]
+
+mon_payment_array = [
+    '65.25',
+    '171.78',
+    '121.59',
+    '179.9',
+    '103.75'
+]
