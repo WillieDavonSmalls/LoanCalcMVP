@@ -156,55 +156,6 @@ for (i = 0; i < 8; i++) {
     `
 }
 
-var test =
-    `<!-- Row Five -->
-<tr>
-    <!--Loan Name -->
-    <th scope="row">
-        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-    </th>
-
-    <!--Oustanding Balance -->
-    <td>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
-            </div>
-            <input type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)"
-            value="21951.27">
-            <div class="input-group-append">
-                <span class="input-group-text">.00</span>
-            </div>
-        </div>
-
-    </td>
-
-    <!-- Annual Interest Rate  -->
-    <td>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control interest_rate" aria-label="Percent"
-            value="5.06">                           
-            <div class="input-group-append">
-                <span class="input-group-text">%</span>
-            </div>
-        </div>
-    </td>
-
-    <!-- Monthly Payment  -->
-    <td>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
-            </div>
-            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)"
-            value="65.25">
-            <div class="input-group-append">
-                <span class="input-group-text">.00</span>
-            </div>
-        </div>
-    </td>
-</tr>`
-
 //load document and begin by displaying the random number to match
 $(document).ready(function() {
     $('#loan_table').append(
