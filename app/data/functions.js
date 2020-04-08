@@ -24,7 +24,7 @@ function calculate_monthly_balance() {
     document.getElementById("tot_monthly_payment").innerHTML = total
 }
 
-//TODO: Sum product for total loan and interest rate
+//Sum product for total loan and interest rate
 function calculate_aggregate_rate() {
     array0 = document.getElementsByClassName("balance")
     array1 = document.getElementsByClassName("interest_rate")
@@ -39,6 +39,14 @@ function calculate_aggregate_rate() {
     }
     document.getElementById("tot_rate").innerHTML = (total0 / total1)
 }
+
+//Calculate Current Loan Metrics
+function calculate_current_loan_metrics() {
+    calculate_outstanding_balance();
+    calculate_aggregate_rate();
+    calculate_monthly_balance();
+}
+
 
 //TODO:  Build table with JQuery
 var out_bal_test_array = [
@@ -198,12 +206,10 @@ var test =
 </tr>`
 
 //load document and begin by displaying the random number to match
-$(document).ready(function () {
+$(document).ready(function() {
     $('#loan_table').append(
-        first_row
-        +
-        table_test
-        +
+        first_row +
+        table_test +
         last_row
     );
 });

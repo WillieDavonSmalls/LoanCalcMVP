@@ -1,248 +1,69 @@
-<!-- Row One -->
-                <tr>
-                    <!--Loan Name -->
-                    <th scope="row">
-                        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-                    </th>
+<!DOCTYPE html>
+<html lang="en">
 
-                    <!--Oustanding Balance -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control balance"
-                                aria-label="Amount (to the nearest dollar)"
-                                value="13677.08">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Decision Calculator</title>
 
-                    </td>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="app/data/functions.js"></script>
+</head>
 
-                    <!-- Annual Interest Rate  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control interest_rate" aria-label="Percent"
-                            value="5.125">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </td>
+<body>
 
-                    <!-- Monthly Payment  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)"
-                            value="65.25">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Refinance Terms</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">LOAN PERIOD IN YEARS</th>
+                <td>15</td>
+            </tr>
+            <tr>
+                <th scope="row">LOAN AMOUNT</th>
+                <td>118680.82</td>
+            </tr>
+            <tr>
+                <th scope="row">PAYMENT FREQUENCY</th>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Bi-Monthly</option>
+                          <option>Monthly</option>
+                          <option>Quarterly</option>
+                          <option>Annually</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">ANNUAL INTEREST RATE</th>
+                <td>5.00%</td>
+            </tr>
+            <tr>
+                <th scope="row">SCHEDULED PAYMENT</th>
+                <td>Larry</td>
+            </tr>
+            </tr>
+            <tr>
+                <th scope="row">TOTAL PAYMENTS</th>
+                <td>Larry</td>
+            </tr>
+            </tr>
+            <tr>
+                <th scope="row">TOTAL INTEREST / TOTAL INVESTMENT GAIN</th>
+                <td>Larry</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
 
-                    </td>
-
-                </tr>
-
-
-                <!-- Row Two -->
-                <tr>
-                    <!--Loan Name -->
-                    <th scope="row">
-                        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-                    </th>
-
-                    <!--Oustanding Balance -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control balance"
-                                aria-label="Amount (to the nearest dollar)"
-                                value="27956.22">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                    <!-- Annual Interest Rate  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control interest_rate" aria-label="Percent"
-                            value="6.59">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </td>
-
-                    <!-- Monthly Payment  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                </tr>
-
-                <!-- Row Three -->
-                <tr>
-                    <!--Loan Name -->
-                    <th scope="row">
-                        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-                    </th>
-
-                    <!--Oustanding Balance -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control balance"
-                                aria-label="Amount (to the nearest dollar)"
-                                value ="23299.47">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                    <!-- Annual Interest Rate  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control interest_rate" aria-label="Percent"
-                            value="5.59">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </td>
-
-                    <!-- Monthly Payment  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                </tr>
-
-                <!-- Row Four -->
-                <tr>
-                    <!--Loan Name -->
-                    <th scope="row">
-                        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-                    </th>
-
-                    <!--Oustanding Balance -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)"
-                            value = "31796.78">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                    <!-- Annual Interest Rate  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control interest_rate" aria-label="Percent"
-                            value="6.06">
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </td>
-
-                    <!-- Monthly Payment  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                </tr>
-
-                <!-- Row Five -->
-                <tr>
-                    <!--Loan Name -->
-                    <th scope="row">
-                        <input type="text" class="form-control" placeholder="Loan 1 Name " aria-label="Username">
-                    </th>
-
-                    <!--Oustanding Balance -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control balance" aria-label="Amount (to the nearest dollar)"
-                            value="21951.27">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                    <!-- Annual Interest Rate  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control interest_rate" aria-label="Percent"
-                            value="5.06">                           
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                    </td>
-
-                    <!-- Monthly Payment  -->
-                    <td>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" class="form-control monthly_payment" aria-label="Amount (to the nearest dollar)"
-                            value="65.25">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+</html>
