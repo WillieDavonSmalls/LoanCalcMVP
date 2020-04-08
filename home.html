@@ -23,7 +23,7 @@
 <body>
 
     <div class="container">
-
+        <div class="row">
         <h1>Financial Loan Decision Calculator </h1>
         <br>
         <table class="table table-striped">
@@ -35,28 +35,13 @@
                     <th scope="col">Normal Monthly Payment</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr id='loan_table'>
-                    <th scope="row">Sallie Mae</th>
-                    <td>5,000.00</td>
-                    <td>11.89</td>
-                    <td>555.55</td>
-                </tr>
-                
-
-                <!-- Final Row -->
-                <tr>
-                    <th scope="row">Aggregates</th>
-                    <td id="totOutBalance">5,000.00</td>
-                    <td id="tot_rate">11.89</td>
-                    <td id="tot_monthly_payment">555.55</td>
-                </tr>
-
+            <tbody id='loan_table'>
+            <!--Data held in function.js-->
             </tbody>
         </table>
         <button onclick="calculate_monthly_balance(); calculate_outstanding_balance(); calculate_aggregate_rate()" type="button" class="btn btn-danger" style="float: right;">Calculate
             Totals</button>
-
+        </div>
     </div>
 
 

@@ -46,7 +46,10 @@ var out_bal_test_array = [
     '27956.22',
     '23299.47',
     '31796.78',
-    '21951.27'
+    '21951.27',
+    '',
+    '',
+    ''
 ]
 
 var int_rate_test_array = [
@@ -54,7 +57,10 @@ var int_rate_test_array = [
     '6.59',
     '5.59',
     '6.06',
-    '5.06'
+    '5.06',
+    '',
+    '',
+    ''
 ]
 
 var mon_payment_array = [
@@ -62,10 +68,30 @@ var mon_payment_array = [
     '171.78',
     '121.59',
     '179.9',
-    '103.75'
+    '103.75',
+    '',
+    '',
+    ''
 ]
 
+var first_row =
+    `<!-- First Row -->
+    <tr>
+        <th scope="row">Sallie Mae</th>
+        <td>5,000.00</td>
+        <td>11.89</td>
+        <td>555.55</td>
+    </tr>`
 
+var last_row =
+    `<!-- Final Row -->
+    <tr>
+        <th scope="row">Aggregates</th>
+        <td id="totOutBalance">5,000.00</td>
+        <td id="tot_rate">11.89</td>
+        <td id="tot_monthly_payment">555.55</td>
+    </tr>
+    `
 
 var table_test = ''
 for (i = 0; i < 8; i++) {
@@ -74,7 +100,7 @@ for (i = 0; i < 8; i++) {
         <tr>
             <!--Loan ${i} Name -->
             <th scope="row">
-                <input type="text" class="form-control" placeholder="Loan ${i} :" aria-label="Username">
+                <input type="text" class="form-control" placeholder="Loan ${i}" aria-label="Username">
             </th>
 
             <!--Oustanding Balance -->
@@ -171,4 +197,13 @@ var test =
     </td>
 </tr>`
 
-$('#loan_table tr:last').after(test);
+//load document and begin by displaying the random number to match
+$(document).ready(function () {
+    $('#loan_table').append(
+        first_row
+        +
+        table_test
+        +
+        last_row
+    );
+});
