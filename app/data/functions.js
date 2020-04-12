@@ -165,36 +165,68 @@ $(document).ready(function() {
 });
 
 
-//var payment_per_period = 0
-var principal = 0;
-var rate = 0;
-var num_payments_period = 0;
-var frequency = calculate_frequency();
+//Refinance Loan Section 
+var principal = get_refi_principal();
+var rate = get_refi_int_rate();
+var num_years = get_refi_loan_years();
+var num_annual_payments = calculate_frequency();
+var sched_payment = payment_per_period();
+var num_tot_payments = get_refi_loan_years() * calculate_frequency();
+var tot_refi_interest = get_refi_principal() - (payment_per_period() * (get_refi_loan_years() * calculate_frequency()))
+
+
+function get_refi_principal() {
+    if (document.getElementById("refi_amt") != null) {
+        return document.getElementById("refi_amt").value;
+    }
+}
+
+function get_refi_int_rate() {
+    if (document.getElementById("interest_rate") != null) {
+        return document.getElementById("interest_rate").value;
+    }
+}
+
+function get_refi_loan_years() {
+    if (document.getElementById("loan_years") != null) {
+        return document.getElementById("loan_years").value
+    }
+}
 
 function calculate_frequency() {
-    freq = document.getElementById("payment_frequency")
-    if (freq != null) {
-        if (freq = "Bi-Monthly") {
+    var freq = 0;
+
+    if (document.getElementById("payment_frequency") != null) {
+
+        payment_frequency = document.getElementById("payment_frequency").value
+
+        if (payment_frequency == "Bi-Monthly") {
             freq = 24;
-        } else if (freq = "Monthly") {
+        } else if (payment_frequency == "Monthly") {
             freq = 12;
-        } else if (freq == "Quarterly") {
+        } else if (payment_frequency == "Quarterly") {
             freq = 4;
-        } else if (freq == "Annually") {
+        } else if (payment_frequency == "Annually") {
             freq = 1;
         } else {
-            freq = 12;
+            freq = 0;
         }
     }
-
     return freq;
 }
 
+function payment_per_period(principal, rate, num_annual_payments, num_years) {
 
+    let p = principal;
+    let r = rate / 100 / num_annual_payments;
+    let n = num_years * num_annual_payments;
 
+    return p * (r * Math.pow(1 + r, n)) / ((Math.pow(1 + r, n) - 1))
 
-function payment_per_period(principal, rate, num_payments_period, frequency) {
+}
 
-    principal * (rate / frequency * Math.pow((1 + rate), num_payments_period * frequency)) / (Math.pow((1 + rate / frequency), num_payments_period * frequency) - 1)
-
+function pub_refi_terms() {
+    document.getElementById("refi_sched_payment").innerHTML = payment_per_period();
+    document.getElementById("num_refi_total_payments").innerHTML = num_tot_payments;
+    document.getElementById("total_refi_interest").innerHTML = tot_refi_interest;
 }

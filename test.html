@@ -25,13 +25,20 @@
         <tbody>
             <tr>
                 <th scope="row">LOAN AMOUNT</th>
-                <td>118680.82</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" id="refi_amt" aria-label="Amount (to the nearest dollar)" value="118680.82">
+                    </div>
+                </td>
             </tr>
             <tr>
                 <th scope="row">LOAN PERIOD IN YEARS</th>
                 <td>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="15">
+                        <input type="text" class="form-control" id="loan_years" value="15">
                     </div>
                     </div>
                 </td>
@@ -53,7 +60,7 @@
                 <th scope="row">ANNUAL INTEREST RATE</th>
                 <td>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="5.00">
+                        <input type="text" class="form-control" id="interest_rate" value="5.00">
                         <div class="input-group-append">
                             <span class="input-group-text">%</span>
                         </div>
@@ -62,20 +69,23 @@
             </tr>
             <tr>
                 <th scope="row">SCHEDULED PAYMENT</th>
-                <td>Larry</td>
+                <td id="refi_sched_payment" value=900></td>
             </tr>
             </tr>
             <tr>
                 <th scope="row">NUMBER OF TOTAL PAYMENTS</th>
-                <td id="num_total_payments"></td>
+                <td id="num_refi_total_payments"></td>
             </tr>
             </tr>
             <tr>
                 <th scope="row">TOTAL INTEREST / TOTAL INVESTMENT GAIN</th>
-                <td>Larry</td>
+                <td id="total_refi_interest">Larry</td>
             </tr>
         </tbody>
     </table>
+    <button onclick="pub_refi_terms()" type="button" class="btn pull-right btn-danger"> 
+        Calculate ReFi Terms
+    </button>
 </body>
 
 </html>
