@@ -24,18 +24,23 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">LOAN PERIOD IN YEARS</th>
-                <td>15</td>
-            </tr>
-            <tr>
                 <th scope="row">LOAN AMOUNT</th>
                 <td>118680.82</td>
+            </tr>
+            <tr>
+                <th scope="row">LOAN PERIOD IN YEARS</th>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="15">
+                    </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <th scope="row">PAYMENT FREQUENCY</th>
                 <td>
                     <div class="form-group">
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="payment_frequency" value="Monthly">
                           <option>Bi-Monthly</option>
                           <option>Monthly</option>
                           <option>Quarterly</option>
@@ -46,7 +51,14 @@
             </tr>
             <tr>
                 <th scope="row">ANNUAL INTEREST RATE</th>
-                <td>5.00%</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="5.00">
+                        <div class="input-group-append">
+                            <span class="input-group-text">%</span>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <th scope="row">SCHEDULED PAYMENT</th>
@@ -54,8 +66,8 @@
             </tr>
             </tr>
             <tr>
-                <th scope="row">TOTAL PAYMENTS</th>
-                <td>Larry</td>
+                <th scope="row">NUMBER OF TOTAL PAYMENTS</th>
+                <td id="num_total_payments"></td>
             </tr>
             </tr>
             <tr>

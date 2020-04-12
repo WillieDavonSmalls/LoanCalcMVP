@@ -124,7 +124,6 @@ for (i = 0; i < 8; i++) {
                         <span class="input-group-text">.00</span>
                     </div>
                 </div>
-
             </td>
 
             <!-- Annual Interest Rate  -->
@@ -164,3 +163,38 @@ $(document).ready(function() {
         last_row
     );
 });
+
+
+//var payment_per_period = 0
+var principal = 0;
+var rate = 0;
+var num_payments_period = 0;
+var frequency = calculate_frequency();
+
+function calculate_frequency() {
+    freq = document.getElementById("payment_frequency")
+    if (freq != null) {
+        if (freq = "Bi-Monthly") {
+            freq = 24;
+        } else if (freq = "Monthly") {
+            freq = 12;
+        } else if (freq == "Quarterly") {
+            freq = 4;
+        } else if (freq == "Annually") {
+            freq = 1;
+        } else {
+            freq = 12;
+        }
+    }
+
+    return freq;
+}
+
+
+
+
+function payment_per_period(principal, rate, num_payments_period, frequency) {
+
+    principal * (rate / frequency * Math.pow((1 + rate), num_payments_period * frequency)) / (Math.pow((1 + rate / frequency), num_payments_period * frequency) - 1)
+
+}
